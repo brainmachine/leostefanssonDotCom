@@ -28,14 +28,21 @@
             <p>set this to something else</p>
         </div>
         <script type="text/javascript">
-            var s;
+            var s1 = "some random string";
+            var s2 = "and some more stringy business";
             for (i = 0; i <= 100; i++) {
                 document.writeln();
                 for (j = 0; j <= 70; j++) {
-                    document.write(j*i);
+                    var t = j*i;
+                    s2 = t.toString();
+                    s1.concat(s2,s1);
+                    document.getElementById("numberSequence").innerHTML=t;
+                    document.write(s);
+                    
                 }
             }
-            console.log("dude");
+            console.log(s1);
+            
             
 
         </script>
