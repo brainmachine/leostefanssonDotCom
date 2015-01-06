@@ -1,32 +1,30 @@
 <html onmousemove="show_coords(event)">
-<head>
-</head>
-<body>
-<p>www.leostefansson.com</p>
-<p>Contact:leostefansson[at]gmail{dot}com<p>
-<p></p>
-<script type="text/javascript">
-$(document).ready(function(){
-  $(document).mousemove(function(event){
-    $("span").text(event.pageX + ", " + event.pageY);
-      for (i = 0; i <= 100; i++) {
-    document.writeln(x);
-    for (j = 0; j <= 70; j++) {
-       document.write(j*i);
-    }
-}
-  });
-});
-    
-var x=event.pageX;
-var y=event.pageY;
-var i = 0;
-var j = 0;
+    <head>
+    </head>
+    <body>
+        <div id="header">
+            <p>www.leostefansson.com</p>
+            <p>Contact:leostefansson[at]gmail{dot}com<p>
+            <p></p>
+        </div>
+
+        <div id="numberSequence">
+            <p>set this to something else</p>
+        </div>
+        <script type="text/javascript">
+
+            for (i = 0; i <= 100; i++) {
+                document.writeln(i);
+                for (j = 0; j <= 70; j++) {
+                    document.write(j*i);
+                }
+            }
 
 
-
-</script>
-
-
-</body>
-</head>
+            var x=event.pageX;
+            var y=event.pageY;
+            var i = 0;
+            var j = 0;
+        </script>
+    </body>
+</html>
