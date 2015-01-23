@@ -1,23 +1,6 @@
 <html>
-    <head>
-        <style type="text/css">
-            body {
-                background-color: yellow;
-                margin: 0;
-                padding: 0;
-                font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-            }
-            div {
-                width: 600px;
-                background-color: orange;
-            }
-            p {
-                color:green;
-                width:
-            }
-        </style>
-        <!-- Eliminate fear of the unknown: (i.e. is anyone actually looking at my site?) -->
+<head>
+    <!-- Eliminate fear of the unknown: (i.e. is anyone actually looking at my site?) -->
         <!-- Google Analytics: -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,38 +9,28 @@
                                     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
             ga('create', 'UA-58830890-1', 'auto');
+            ga('require', 'displayfeatures');
             ga('send', 'pageview');
         </script>
-
-    </head>
-    <body>
-        <div id="header">
-            <p>www.leostefansson.com</p>
-            <p>Contact:leostefansson[at]gmail{dot}com<p>
-            <p></p>
-        </div>
-
-        <div id="numberSequence">
-            <p>set this to something else</p>
-        </div>
+</head>     
+<body>
+    <div>
+        <p>www.leostefansson.com</p>
+        <p>Contact:leostefansson[at]gmail{dot}com<p>
+        <p></p>
+        
         <script type="text/javascript">
-            var s1 = "some random string";
-            var s2 = "and some more stringy business";
+            var i = 0;
+            var j = 0;
             for (i = 0; i <= 100; i++) {
-                document.writeln();
+                document.writeln(i);
                 for (j = 0; j <= 70; j++) {
-                    var t = j*i;
-                    s2 = t.toString();
-                    s1.concat(s2,s1);
-                    document.getElementById("numberSequence").innerHTML=t;
-                    document.write(s);
-
+                    document.write(j*i);
                 }
             }
-            console.log(s1);
-
-
-
         </script>
-    </body>
-</html>
+    </div>
+</body>
+    
+
+
