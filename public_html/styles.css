@@ -37,11 +37,33 @@
     }
 }
 
+html,body { height: 100%; 
+    margin: 0px; 
+    padding: 0px; 
+}
+#sideBar {
+    float:left;
+    width: 300px;
+    height: 100%;
+    background-color: gray;    
+}
+#numberSequence {
+    float:right;
+}
+
 #title{
     text-align: left;
-    font-size: 27px;
+    font-size: 33px;
     margin-bottom: 37px;
     font-family: 'Julius Sans One', sans-serif;
     color: #04040E;
     cursor:pointer;
+}
+
+#mainArea {
+    background-color: red;
+    margin-left:300px;
+    margin-top:-300px;
+    height:100%;
+
 }
