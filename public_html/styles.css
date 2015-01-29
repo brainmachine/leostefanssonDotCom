@@ -60,7 +60,7 @@ html,body { height: 100%;
     cursor:pointer;
 }
 
-#mainArea {
+#mainblueArea {
     background-color: red;
     margin-left:300px;
     margin-top:-300px;
