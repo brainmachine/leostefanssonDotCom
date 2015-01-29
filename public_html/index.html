@@ -188,12 +188,16 @@
                         $("#mainArea").html(data);
                     });
                 }
-                loadPage("oldSiteShort.html");
-
+                
+                var pages = ["oldSiteShort.html", "someData.html"];
+                loadPage(pages[1]);
+                alert(pages);
+                
                 // Handle navigation:
                 $('#room4b').click(function() {
                     alert("OYYO");
                 });
+                
             </script>
 
 
