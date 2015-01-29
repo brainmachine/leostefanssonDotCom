@@ -181,16 +181,19 @@
             </div>
             <script type="text/javascript">
                 // Put something in our main area:
-                $.ajax({
-                    url:"oldSiteShort.html"
-                }).done(function(data) {
-                    $("#mainArea").html(data);
-                });
+                function loadPage(page) {
+                    $.ajax({
+                        url:page
+                    }).done(function(data) {
+                        $("#mainArea").html(data);
+                    });
+                }
+                loadPage("oldSiteShort.html");
 
                 // Handle navigation:
                 $('#room4b').click(function() {
-                                         alert("OYYO");
-                                         });
+                    alert("OYYO");
+                });
             </script>
 
 
