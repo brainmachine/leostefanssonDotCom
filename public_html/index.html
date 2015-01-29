@@ -29,16 +29,16 @@
             ga('require', 'displayfeatures'); // This line enables advertiser tracking, remove it if you don't want it
             ga('send', 'pageview');
         </script>
-        
+
         <!-- Google Fonts --> 
-         <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
-        
+        <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+
 
         <!-- navbar styles --> 
         <link rel="stylesheet" type="text/css" href="styles.css">
         <!-- other styles -->
         <style type="text/css">
-            
+
 
         </style>
 
@@ -50,6 +50,30 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+
+        <div class="tabbable" style="margin-bottom: 18px;">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">Request Audit</a></li>
+                <li class=""><a href="#tab2" data-toggle="tab">Status</a></li>
+                <li class=""><a href="#tab3" data-toggle="tab">Settings</a></li>
+                <li class=""><a href="#tab4" data-toggle="tab">Help</a></li>
+            </ul>
+            <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+                <div class="tab-pane active" id="tab1">
+                    <p>Placeholder 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                    <p>Placeholder 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                    <p>Placeholder 3</p>
+                </div>
+                <div class="tab-pane" id="tab4">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+        </div>​
+
         <!--
 <div id="sideBar">
 <h2>Leó Stefánsson</h2 type="h2">
@@ -81,7 +105,7 @@
                             <li><a href="#">One more separated link</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -99,15 +123,23 @@
                 <li><a href="oldSite.html">Old Site</a></li>
             </div><!-- /.navbar-collapse -->
         </nav>
-        
+
         <div class="jumbotron" id="mainArea">
-        <h1>ALERT</h1>
+            <h1>ALERT</h1>
             <h2>I need your attention</h2>
-                <h3>quite a lot</h3>
+            <h3>quite a lot</h3>
             <h4>but not really that much</h4>
             <h5>but still</h5>
             <h6>I might run out of headers</h6>
         </div>
+
+        <script type="text/javascript">
+            $.ajax({
+                url:"oldSite.html"
+            }).done(function(data) {
+                $("#mainArea").html(data);
+            });
+        </script>
 
 
 
