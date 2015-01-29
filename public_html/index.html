@@ -41,38 +41,13 @@
 
 
         </style>
-
-    </head>
-    <body>
-
-
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
 
-        <div class="tabbable" style="margin-bottom: 18px;">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#tab1" data-toggle="tab">Request Audit</a></li>
-                <li class=""><a href="#tab2" data-toggle="tab">Status</a></li>
-                <li class=""><a href="#tab3" data-toggle="tab">Settings</a></li>
-                <li class=""><a href="#tab4" data-toggle="tab">Help</a></li>
-            </ul>
-            <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
-                <div class="tab-pane active" id="tab1">
-                    <p>Placeholder 1</p>
-                </div>
-                <div class="tab-pane" id="tab2">
-                    <p>Placeholder 2</p>
-                </div>
-                <div class="tab-pane" id="tab3">
-                    <p>Placeholder 3</p>
-                </div>
-                <div class="tab-pane" id="tab4">
-                    <p>Placeholder</p>
-                </div>
-            </div>
-        </div>​
 
         <!--
 <div id="sideBar">
@@ -80,6 +55,7 @@
 <p>Experimental acoustics, sound and light installation, live performance, programming and techno-mysticism.</p>
 </div>
 -->
+        <div class="container row-sm-12">
         <nav class="navbar navbar-default" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -117,14 +93,80 @@
                             <li><a href="#">Separated link</a></li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Audio <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Video <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">WebArt <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">WebArt <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">WebArt <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">WebArt <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">WebArt <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    
                 </ul>
-                <li><a href="about.html">About</a></li>
+                <li><a href="someData.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="oldSite.html">Old Site</a></li>
             </div><!-- /.navbar-collapse -->
         </nav>
+        </div>
+        
 
-        <div class="jumbotron" id="mainArea">
+        <div class="container row-sm-12" id="mainArea">
             <h1>ALERT</h1>
             <h2>I need your attention</h2>
             <h3>quite a lot</h3>
@@ -132,10 +174,10 @@
             <h5>but still</h5>
             <h6>I might run out of headers</h6>
         </div>
-
+        
         <script type="text/javascript">
             $.ajax({
-                url:"oldSite.html"
+                url:"oldSiteShort.html"
             }).done(function(data) {
                 $("#mainArea").html(data);
             });
