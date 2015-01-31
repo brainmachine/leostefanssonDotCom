@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -189,15 +189,21 @@
                     });
                 }
                 
-                var pages = ["oldSiteShort.html", "someData.html"];
-                loadPage(pages[1]);
-                alert(pages);
+                var pages = $.getJSON("activePages.json");
+
+                console.log(pages);
                 
+                var obj = JSON.parse(pages);
+
+                //loadPage(obj[1].thing.path.value);
+                console.log("this is your personal console");
+                $("#someDiv").html("sometingsæfngæsflgnsældfgnæsldfngæsdlfng");
+
                 // Handle navigation:
                 $('#room4b').click(function() {
                     alert("OYYO");
                 });
-                
+
             </script>
 
 
