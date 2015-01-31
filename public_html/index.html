@@ -55,8 +55,8 @@
 <p>Experimental acoustics, sound and light installation, live performance, programming and techno-mysticism.</p>
 </div>
 -->
-            <div class="col">
-                <div class="container col-sm-3 row-sm-12">
+            <div class="container col-sm-3 row-sm-12">
+                <div class="col">
                     <nav class="navbar navbar-default" role="navigation">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
@@ -176,9 +176,6 @@
                 <h6>I might run out of headers</h6>
             </div>
 
-            <div id="someDiv">
-                <h1>this is some div</h1>
-            </div>
             <script type="text/javascript">
                 // Put something in our main area:
                 function loadPage(page) {
@@ -188,16 +185,16 @@
                         $("#mainArea").html(data);
                     });
                 }
-                
-                var pages = $.getJSON("activePages.json");
 
-                console.log(pages);
-                
-                var obj = JSON.parse(pages);
-
-                //loadPage(obj[1].thing.path.value);
+                var activePages = '{ "work" : [' +
+                    '{ "title":"room4b" , "path":"someData.html" },' +
+                    '{ "title":"About" , "path":"about.html" },' +
+                    '{ "title":"Rhizome" , "path":"http://www.rhizome.org/" } ]}';
+                //                
+                var obj = JSON.parse(activePages);
+                alert(obj.work[1].title + " " + obj.work[1].path);
+                loadPage(obj.work[1].path);
                 console.log("this is your personal console");
-                $("#someDiv").html("sometingsæfngæsflgnsældfgnæsldfngæsdlfng");
 
                 // Handle navigation:
                 $('#room4b').click(function() {
