@@ -192,13 +192,14 @@
                     '{ "title":"Rhizome" , "path":"http://www.rhizome.org/" } ]}';
                 //                
                 var obj = JSON.parse(activePages);
-                alert(obj.work[1].title + " " + obj.work[1].path);
-                loadPage(obj.work[1].path);
+
+                loadPage(obj.work[0].path);
                 console.log("this is your personal console");
 
                 // Handle navigation:
                 $('#room4b').click(function() {
-                    alert("OYYO");
+                    alert("room4b!");
+                    loadPage("room4b.html");
                 });
 
             </script>
