@@ -1,0 +1,23 @@
+Webdev TODO:
+
+leostefansson.com
+-----------------
+About page
+Bio  page
+CV page
+    -Awards, Grants and Nominations
+        -Emily Carr, Honorary Mention
+    -Publications
+    
+Media Page
+    -Various places you can find my content
+        -Link to pages that have my content on it
+        -Email the owner/author of those sites, 
+            -tell them about myself and 
+            -they are featuring my content on their site. 
+            -I'm building - and promoting my own website
+            -Would appreciate if you could link back 
+                -(or if you already have, encourage your users to click it, 
+                -feature the post again, etc.) 
+                -(help me out)
+
