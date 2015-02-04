@@ -117,34 +117,26 @@
             </div>
 
             <script type="text/javascript">
-                // title should be == to link ID
-                var activePages = '{ "general" : [' +
+                // name should be == to link (<a href id="awesomeId">)
+                var activePages = '{ "link" : [' +
                     '{ "name":"room4b" , "path":"room4b.html" },' +
                     '{ "name":"about" , "path":"about.html" },' +
                     '{ "name":"contact" , "path":"contact.html" } ]}';
                 //                
                 var pages = JSON.parse(activePages);
-                //                console.log(pages);
-                //                console.log(pages.general[0]);
-
-                $("ul li a").click(function() {
-                    
+                
+                // Detect any link click
+                $("ul li a").click(function() {             
+                    // Make sure <a> tag has an id
                     if (this.id != "") {
-                        for(var i = 0; i < pages.general.length; i++) {
-                          //  alert(this.id);
-                             if (this.id == pages.general[i].name) {
-//                                 alert(this.id);
-//                                 alert(pages.general[i].path);
-                                 loadPage(pages.general[i].path);
-                             }
+                        // Go through all general pages (declared above)
+                        for(var i = 0; i < pages.link.length; i++) {
+                            // Find a match in the json and load the page on success
+                            if (this.id == pages.link[i].name) {
+                                loadPage(pages.link[i].path);
+                            }
                         }
-                       // alert(pages.general[this.id]);
-//                        var pageId = "#"+this.id; //pageId must be same as link id
-//                        var pagePath = this.href;
-//                        alert(pagePath);
                     }
-                    //                    loadPage(pagePath);
-
                 });
 
 
