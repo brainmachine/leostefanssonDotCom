@@ -131,9 +131,10 @@
                     console.log(pages.general[i]);
                     if (pages.general[i].name == "contact") {
                         var pageId = "#"+pages.general[i].name;
+                        var pagePath = pages.general[i].path;
                         alert(pageId);
                         $(pageId).click(function() {
-                            loadPage("contact.html");
+                            loadPage(pagePath);
 
                         });
                     }
