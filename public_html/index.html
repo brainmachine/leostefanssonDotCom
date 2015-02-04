@@ -107,6 +107,7 @@
                 var activePages = '{ "link" : [' +
                     '{ "name":"room4b" , "path":"room4b.html" },' +
                     '{ "name":"about" , "path":"about.html" },' +
+                    '{ "name":"brainmachine" , "path":"brainmachine.html" },' +
                     '{ "name":"contact" , "path":"contact.html" } ]}';
                 //                
                 var pages = JSON.parse(activePages);
@@ -137,11 +138,15 @@
 
                 // FUNCTIONS:
                 function loadPage(page) {
+
                     $.ajax({
                         url:page
                     }).done(function(data) {
                         $("#mainArea").html(data);
+                    }).fail(function() {
+                        loadPage("nothingHere.html"); // Let's hope this file doesn't disappear
                     });
+                    
                 }
 
 
