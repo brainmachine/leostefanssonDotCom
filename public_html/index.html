@@ -105,7 +105,7 @@
                                     <a id="contact" href="#contact" >Contact me</a>
                                 </li>
                             </ul>
-                            
+
                         </div><!-- /.navbar-collapse -->
                     </nav>
                 </div>
@@ -124,18 +124,27 @@
                     '{ "name":"contact" , "path":"contact.html" } ]}';
                 //                
                 var pages = JSON.parse(activePages);
-//                console.log(pages);
-//                console.log(pages.general[0]);
-                
+                //                console.log(pages);
+                //                console.log(pages.general[0]);
+
                 for (var i = 0; i < pages.general.length; i++) {
                     console.log(pages.general[i]);
+                    if (pages.general[i].name == "contact") {
+                        var pageId = "#"+pages.general[i].name;
+                        alert(pageId);
+                        $(pageId).click(function() {
+                            loadPage("contact.html");
+
+                        });
+                    }
+                    else  {
+                        alert("boo");
+                    }
                 }
                 // Put something in our main area:
 
-                $("#contact").click(function() {
-                    loadPage("contact.html");
-                });
-                
+
+
                 // FUNCTIONS:
                 function loadPage(page) {
                     $.ajax({
