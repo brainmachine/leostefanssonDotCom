@@ -19,7 +19,6 @@
 
     .navbar
     {
-        max-width:300px;
         margin-right: 0;
         margin-left: 0;
     }	
@@ -58,13 +57,4 @@ html,body { height: 100%;
     font-family: 'Julius Sans One', sans-serif;
     color: #04040E;
     cursor:pointer;
-}
-
-#mainblueArea {
-    background-color: red;
-    margin-left:300px;
-    margin-top:-300px;
-    height:110%;
-    padding-left: 37px;
-
 }

@@ -101,8 +101,8 @@
                                         <li><a href="#">Separated link</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="contact.html" class="dropdown-toggle">Contact me</a>
+                                <li class="dropdown-toggle" id="tryMe">
+                                    <a id="contact" href="#contact" >Contact me</a>
                                 </li>
                             </ul>
                             
@@ -112,12 +112,31 @@
             </div>
 
             <div class="container col-sm-9" id="mainArea">
-                <h1>uhhh...</h1>
-                <h2>is this real?</h2>
+                <h1>Welcome to my website</h1>
+                <h2>this is the landing page, nothing else has been set to display here</h2>
             </div>
 
             <script type="text/javascript">
+                // title should be == to link ID
+                var activePages = '{ "general" : [' +
+                    '{ "name":"room4b" , "path":"room4b.html" },' +
+                    '{ "name":"about" , "path":"about.html" },' +
+                    '{ "name":"contact" , "path":"contact.html" } ]}';
+                //                
+                var pages = JSON.parse(activePages);
+//                console.log(pages);
+//                console.log(pages.general[0]);
+                
+                for (var i = 0; i < pages.general.length; i++) {
+                    console.log(pages.general[i]);
+                }
                 // Put something in our main area:
+
+                $("#contact").click(function() {
+                    loadPage("contact.html");
+                });
+                
+                // FUNCTIONS:
                 function loadPage(page) {
                     $.ajax({
                         url:page
@@ -125,27 +144,6 @@
                         $("#mainArea").html(data);
                     });
                 }
-
-                // title should be == to link ID
-                var activePages = '{ "work" : [' +
-                    '{ "title":"room4b" , "path":"room4b.html" },' +
-                    '{ "title":"About" , "path":"about.html" },' +
-                    '{ "title":"Brainmachine" , "path":"brainmachine.html" } ]}';
-                //                
-                var pages = JSON.parse(activePages);
-
-                // Load an initial page into the main area
-                // loadPage(pages.work[0].path);
-                console.log(pages);
-
-                //$("#mainArea").load("someData.html");
-
-                $("#about").click(function() {
-                    //alert(this.href);
-                    //$("#mainArea").load("contact.html");
-                    loadPage("about.html");
-                });
-
 
 
             </script>
