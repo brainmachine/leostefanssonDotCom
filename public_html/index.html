@@ -92,8 +92,8 @@
                                     
                                 </li>
                                 
-                                <li class="dropdown">
-                                    <a id="contact" href="#contact" class="dropdown-menu" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                                <li class="">
+                                    <a id="contact" href="#contact" class="" data-toggle="dropdown">Contact <b class="btn"></b></a>
                                     
                                 </li>
 
@@ -105,17 +105,15 @@
             </div>
 
         <div class="container col-sm-9" id="mainArea">
-            <h1>Welcome to my website</h1>
-            <h2>this is the landing page, nothing else has been set to display here</h2>
         </div>
 
         <script type="text/javascript">
             // name should be == to link (<a href id="awesomeId">)
             var activePages = '{ "link" : [' +
                 '{ "name":"room4b" , "path":"room4b.html" },' +
-                '{ "name":"about" , "path":"about/about.php" },' +
+                '{ "name":"about" , "path":"about/index.php" },' +
                 '{ "name":"brainmachine" , "path":"brainmachine.html" },' +
-                '{ "name":"contact" , "path":"contact.html" } ]}';
+                '{ "name":"contact" , "path":"contact.php" } ]}';
             //                
             var pages = JSON.parse(activePages);
              // Put something in our main area:
@@ -164,7 +162,11 @@
             }
             
             function resizeNavbarElements() {
-                $("ul li a").css("width", $(".navbar").css("width"));
+                var w = parseInt($(".navbar").css("width"), 10);
+                var s = w/10;
+
+                $("ul li a").css("width", w);
+                $("ul li a").css("font-size", s);
             }
 
 
