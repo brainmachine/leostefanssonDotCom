@@ -49,23 +49,17 @@
     <body>
         <main class="bs-docs-masthead" id="content" role="main">
 
-            <!--
-<div id="sideBar">
-<h2>Leó Stefánsson</h2 type="h2">
-<p>Experimental acoustics, sound and light installation, live performance, programming and techno-mysticism.</p>
-</div>
--->
             <div class="col">
                 <div class="container col-sm-3">
                     <nav class="navbar navbar-default" role="navigation">
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header col-sm-3">
+                        <div class="navbar-header col-md-3">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="glyphicon glyphicon-menu-down"></span>
 
                             </button>
-                            <a class="navbar-brand" href="#" id="title">leó stefánsson</a>
+                            <a id="landing" class="navbar-brand" href="#main" id="title">leó stefánsson</a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -104,12 +98,13 @@
             </div>
             </div>
 
-        <div class="container col-sm-9" id="mainArea">
+        <div class="container col-md-9" id="mainArea">
         </div>
 
         <script type="text/javascript">
             // name should be == to link (<a href id="awesomeId">)
             var activePages = '{ "link" : [' +
+                '{ "name":"landing" , "path":"oldSiteShort.html" },' +
                 '{ "name":"room4b" , "path":"room4b.html" },' +
                 '{ "name":"about" , "path":"about/index.php" },' +
                 '{ "name":"brainmachine" , "path":"brainmachine.html" },' +
@@ -117,7 +112,7 @@
             //                
             var pages = JSON.parse(activePages);
              // Put something in our main area:
-            loadPage("someData.html");
+            loadPage("oldSiteShort.html");
             
             // Detect any clicked link
             $("a").click(function() {             
@@ -164,9 +159,12 @@
             function resizeNavbarElements() {
                 var w = parseInt($(".navbar").css("width"), 10);
                 var s = w/10;
+                var t = w/7;
 
                 $("ul li a").css("width", w);
                 $("ul li a").css("font-size", s);
+                $(".navbar-brand").css("width", w);
+              //  $(".navbar-brand").css("font-size", t);
             }
 
 

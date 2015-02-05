@@ -39,12 +39,17 @@
     }
 }
 
+
 html,body { height: 100%; 
     margin: 0px; 
     padding: 0px; 
 }
 a {
     width:100%;
+}
+br {
+   display: block;
+   margin: 10px 0;
 }
 #sideBar {
     float:left;
