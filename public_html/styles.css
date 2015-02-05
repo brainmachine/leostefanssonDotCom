@@ -44,8 +44,8 @@ html,body { height: 100%;
     margin: 0px; 
     padding: 0px; 
 }
-a {
-
+#mainArea {
+    ;
 }
 
 #sideBar {
@@ -58,10 +58,10 @@ a {
     float:right;
 }
 
-#title{
+#landing{
     align-content: center;
-    font-size: 18px;
-    <!-- margin-bottom: 37px; -->
+    font-size: 24px;
+    margin-bottom: 37px;
     <!-- font-family: 'Julius Sans One', sans-serif; -->
     color: #04040E;
     cursor:pointer;
