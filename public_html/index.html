@@ -81,7 +81,7 @@
                                 </li>
                                 
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Performance and some other ridiculisaougaæosfh asdfpsijdpfijasdfpaisdjf piasdjf <b class="caret"></b></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Performance<b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Action</a></li>
                                     </ul>
@@ -118,7 +118,9 @@
                 '{ "name":"contact" , "path":"contact.html" } ]}';
             //                
             var pages = JSON.parse(activePages);
-
+             // Put something in our main area:
+            loadPage("someData.html");
+            
             // Detect any clicked link
             $("ul li a").click(function() {             
                 // Make sure <a> tag has an id
@@ -137,10 +139,15 @@
                     }
                 }
             });
+            
+            resizeNavbarElements(); // initialize the correct navbar item size
+            $(window).resize(function() {
+                resizeNavbarElements();
+            })
+            
+            
 
-
-            // Put something in our main area:
-            loadPage("someData.html");
+           
 
 
             // FUNCTIONS:
@@ -154,6 +161,10 @@
                     loadPage("nothingHere.html"); // Let's hope this file doesn't disappear
                 });
 
+            }
+            
+            function resizeNavbarElements() {
+                $("ul li a").css("width", $(".navbar").css("width"));
             }
 
 
