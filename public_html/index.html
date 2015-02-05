@@ -49,9 +49,9 @@
     <body>
         <main class="bs-docs-masthead" id="content" role="main">
 
-            <div class="col">
-                <div class="container col-sm-3">
-                    <nav class="navbar navbar-default" role="navigation">
+            <div class="col-md-3">
+                <div class="container col-md-12">
+                    <nav class="navbar navbar-default" role="navigation" id="sidebar">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header col-md-3">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -73,102 +73,102 @@
                                         <li><a href="#decanter">Decanter</a></li>
                                     </ul>
                                 </li>
-                                
+
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Performance<b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Action</a></li>
                                     </ul>
                                 </li>
-                                
+
                                 <li class="">
                                     <a id="about" href="#about" class="" data-toggle="dropdown">About <b class="btn"></b></a>
-                                    
+
                                 </li>
-                                
+
                                 <li class="">
                                     <a id="contact" href="#contact" class="" data-toggle="dropdown">Contact <b class="btn"></b></a>
-                                    
+
                                 </li>
 
                             </ul>
 
                         </div><!-- /.navbar-collapse -->
                     </nav>
-            </div>
+                </div>
             </div>
 
-        <div class="container col-md-9" id="mainArea">
-        </div>
+            <div class="container col-md-9" id="mainArea">
+            </div>
 
-        <script type="text/javascript">
-            // name should be == to link (<a href id="awesomeId">)
-            var activePages = '{ "link" : [' +
-                '{ "name":"landing" , "path":"oldSiteShort.html" },' +
-                '{ "name":"room4b" , "path":"room4b.html" },' +
-                '{ "name":"about" , "path":"about/index.php" },' +
-                '{ "name":"brainmachine" , "path":"brainmachine.html" },' +
-                '{ "name":"contact" , "path":"contact.php" } ]}';
-            //                
-            var pages = JSON.parse(activePages);
-             // Put something in our main area:
-            loadPage("oldSiteShort.html");
-            
-            // Detect any clicked link
-            $("a").click(function() {             
-                 // Make sure <a> tag has an id
-                if (this.id != "") {
-                    // Go through all general pages (declared above)
-                    var foundMatch = false;
-                    for(var i = 0; i < pages.link.length; i++) {
-                        // Find a match in the json and load the page on success
-                        if (this.id == pages.link[i].name) {
-                            loadPage(pages.link[i].path);
-                            foundMatch = true;
+            <script type="text/javascript">
+                // name should be == to link (<a href id="awesomeId">)
+                var activePages = '{ "link" : [' +
+                    '{ "name":"landing" , "path":"oldSiteShort.html" },' +
+                    '{ "name":"room4b" , "path":"room4b.html" },' +
+                    '{ "name":"about" , "path":"about/index.php" },' +
+                    '{ "name":"brainmachine" , "path":"brainmachine.html" },' +
+                    '{ "name":"contact" , "path":"contact.php" } ]}';
+                //                
+                var pages = JSON.parse(activePages);
+                // Put something in our main area:
+                loadPage("oldSiteShort.html");
+
+                // Detect any clicked link
+                $("a").click(function() {             
+                    // Make sure <a> tag has an id
+                    if (this.id != "") {
+                        // Go through all general pages (declared above)
+                        var foundMatch = false;
+                        for(var i = 0; i < pages.link.length; i++) {
+                            // Find a match in the json and load the page on success
+                            if (this.id == pages.link[i].name) {
+                                loadPage(pages.link[i].path);
+                                foundMatch = true;
+                            }
+                        }
+                        if (!foundMatch) {
+                            loadPage("nothingHere.html");
                         }
                     }
-                    if (!foundMatch) {
-                        loadPage("nothingHere.html");
-                    }
-                }
-            });
-            
-            resizeNavbarElements(); // initialize the correct navbar item size
-            $(window).resize(function() {
-                resizeNavbarElements();
-            })
-            
-            
-
-           
-
-
-            // FUNCTIONS:
-            function loadPage(page) {
-
-                $.ajax({
-                    url:page
-                }).done(function(data) {
-                    $("#mainArea").html(data);
-                }).fail(function() {
-                    loadPage("nothingHere.html"); // Let's hope this file doesn't disappear
                 });
 
-            }
-            
-            function resizeNavbarElements() {
-                var w = parseInt($(".navbar").css("width"), 10);
-                var s = w/10;
-                var t = w/7;
-
-                $("ul li a").css("width", w);
-                $("ul li a").css("font-size", s);
-                $(".navbar-brand").css("width", w);
-              //  $(".navbar-brand").css("font-size", t);
-            }
+                resizeNavbarElements(); // initialize the correct navbar item size
+                $(window).resize(function() {
+                    resizeNavbarElements();
+                })
 
 
-        </script>
+
+
+
+
+                // FUNCTIONS:
+                function loadPage(page) {
+
+                    $.ajax({
+                        url:page
+                    }).done(function(data) {
+                        $("#mainArea").html(data);
+                    }).fail(function() {
+                        loadPage("nothingHere.html"); // Let's hope this file doesn't disappear
+                    });
+
+                }
+
+                function resizeNavbarElements() {
+                    var w = parseInt($(".navbar").css("width"), 10);
+                    var s = w/10;
+                    var t = w/7;
+//
+                    $("ul li a").css("width", w);
+//                    $("ul li a").css("font-size", s);
+//                    $(".navbar-brand").css("width", w);
+                    //  $(".navbar-brand").css("font-size", t);
+                }
+
+
+            </script>
 
 
         </main>

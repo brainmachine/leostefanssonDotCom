@@ -45,12 +45,9 @@ html,body { height: 100%;
     padding: 0px; 
 }
 a {
-    width:100%;
+
 }
-br {
-   display: block;
-   margin: 10px 0;
-}
+
 #sideBar {
     float:left;
     <!-- width: 300px; -->
