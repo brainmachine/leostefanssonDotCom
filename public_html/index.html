@@ -56,15 +56,16 @@
 </div>
 -->
             <div class="col">
-                <div class="container col-sm-3 row-sm-12">
+                <div class="container col-sm-3">
                     <nav class="navbar navbar-default" role="navigation">
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
+                        <div class="navbar-header col-sm-3">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="glyphicon glyphicon-menu-down"></span>
+
                             </button>
-                            <a class="navbar-brand" href="#" id="title">leó.stefánsson</a>
+                            <a class="navbar-brand" href="#" id="title">leó stefánsson</a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,79 +79,85 @@
                                         <li><a href="#decanter">Decanter</a></li>
                                     </ul>
                                 </li>
+                                
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Performance <b class="caret"></b></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Performance and some other ridiculisaougaæosfh asdfpsijdpfijasdfpaisdjf piasdjf <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li><a href="#">Separated link</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown-toggle" id="tryMe">
-                                    <a id="contact" href="#contact" >Contact me</a>
+                                
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="btn"></b></a>
+                                    
                                 </li>
+                                
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="btn btn-full"></b></a>
+                                    
+                                </li>
+
                             </ul>
 
                         </div><!-- /.navbar-collapse -->
                     </nav>
-                </div>
+            </div>
             </div>
 
-            <div class="container col-sm-9" id="mainArea">
-                <h1>Welcome to my website</h1>
-                <h2>this is the landing page, nothing else has been set to display here</h2>
-            </div>
+        <div class="container col-sm-9" id="mainArea">
+            <h1>Welcome to my website</h1>
+            <h2>this is the landing page, nothing else has been set to display here</h2>
+        </div>
 
-            <script type="text/javascript">
-                // name should be == to link (<a href id="awesomeId">)
-                var activePages = '{ "link" : [' +
-                    '{ "name":"room4b" , "path":"room4b.html" },' +
-                    '{ "name":"about" , "path":"about.html" },' +
-                    '{ "name":"brainmachine" , "path":"brainmachine.html" },' +
-                    '{ "name":"contact" , "path":"contact.html" } ]}';
-                //                
-                var pages = JSON.parse(activePages);
-                
-                // Detect any clicked link
-                $("ul li a").click(function() {             
-                    // Make sure <a> tag has an id
-                    if (this.id != "") {
-                        // Go through all general pages (declared above)
-                        var foundMatch = false;
-                        for(var i = 0; i < pages.link.length; i++) {
-                            // Find a match in the json and load the page on success
-                            if (this.id == pages.link[i].name) {
-                                loadPage(pages.link[i].path);
-                                foundMatch = true;
-                            }
-                        }
-                        if (!foundMatch) {
-                            loadPage("nothingHere.html");
+        <script type="text/javascript">
+            // name should be == to link (<a href id="awesomeId">)
+            var activePages = '{ "link" : [' +
+                '{ "name":"room4b" , "path":"room4b.html" },' +
+                '{ "name":"about" , "path":"about" },' +
+                '{ "name":"brainmachine" , "path":"brainmachine.html" },' +
+                '{ "name":"contact" , "path":"contact.html" } ]}';
+            //                
+            var pages = JSON.parse(activePages);
+
+            // Detect any clicked link
+            $("ul li a").click(function() {             
+                // Make sure <a> tag has an id
+                if (this.id != "") {
+                    // Go through all general pages (declared above)
+                    var foundMatch = false;
+                    for(var i = 0; i < pages.link.length; i++) {
+                        // Find a match in the json and load the page on success
+                        if (this.id == pages.link[i].name) {
+                            loadPage(pages.link[i].path);
+                            foundMatch = true;
                         }
                     }
+                    if (!foundMatch) {
+                        loadPage("nothingHere.html");
+                    }
+                }
+            });
+
+
+            // Put something in our main area:
+            loadPage("someData.html");
+
+
+            // FUNCTIONS:
+            function loadPage(page) {
+
+                $.ajax({
+                    url:page
+                }).done(function(data) {
+                    $("#mainArea").html(data);
+                }).fail(function() {
+                    loadPage("nothingHere.html"); // Let's hope this file doesn't disappear
                 });
 
-
-                // Put something in our main area:
-                loadPage("someData.html");
+            }
 
 
-                // FUNCTIONS:
-                function loadPage(page) {
-
-                    $.ajax({
-                        url:page
-                    }).done(function(data) {
-                        $("#mainArea").html(data);
-                    }).fail(function() {
-                        loadPage("nothingHere.html"); // Let's hope this file doesn't disappear
-                    });
-                    
-                }
-
-
-            </script>
+        </script>
 
 
         </main>

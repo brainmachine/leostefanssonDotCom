@@ -27,8 +27,12 @@
     .navbar-nav > li,
     .navbar-left,
     .navbar-right,
-    .navbar-header
-    {float:none !important;}
+    .navbar-header,
+    {   
+        float:none !important;
+        color: #04040E;
+        width:100%;
+    }
 
     .navbar-right .dropdown-menu {left:0;right:auto;}
     .navbar-collapse .navbar-nav.navbar-right:last-child {
@@ -51,10 +55,10 @@ html,body { height: 100%;
 }
 
 #title{
-    text-align: left;
-    font-size: 33px;
+    align-content: center;
+    font-size: 24px;
     margin-bottom: 37px;
-    font-family: 'Julius Sans One', sans-serif;
+    <!-- font-family: 'Julius Sans One', sans-serif; -->
     color: #04040E;
     cursor:pointer;
 }
